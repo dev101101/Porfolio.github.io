@@ -1,37 +1,26 @@
-# Portfolio · Diego (Felix) Amachi
+# Portafolio de Diego (Felix) Amachi
 
-Single-page portfolio built with Vite, React 19 y TypeScript. Presenta hero, métricas, aptitudes, experiencia, educación, certificaciones, proyectos y contacto.
+Bienvenido a mi portafolio personal: una single page moderna con hero, métricas, aptitudes, experiencia, educación, certificaciones, proyectos destacados y contacto.
 
-## Requisitos
+## Tecnologías
 
-- Node.js 18+
-- npm
+- Vite + React 19 + TypeScript
+- CSS personalizado (sin Tailwind en producción)
 
-## Instalación
-
-```bash
-npm install
-```
-
-## Desarrollo
+## Cómo levantar el proyecto
 
 ```bash
-npm run dev
+npm install   # instala dependencias
+npm run dev   # arranca el entorno de desarrollo
+npm run build # genera el build de producción
+npm run lint  # ejecuta el linter
 ```
 
-## Build de producción
+## Personalización rápida
 
-```bash
-npm run build
-```
+- Correo de contacto: actualiza `contactEmail` en [src/App.tsx](src/App.tsx).
+- Estilos: ajusta el CSS en [src/styles/App.css](src/styles/App.css).
 
-## Lint
+## Nota
 
-```bash
-npm run lint
-```
-
-## Notas
-
-- Cambia el correo de contacto en `src/App.tsx` (`contactEmail`).
-- Estilos personalizados en `src/styles/App.css` (no se usa Tailwind a pesar de estar instalado).
+Requiere Node.js 18+ y npm.
