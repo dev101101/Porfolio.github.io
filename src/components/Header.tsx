@@ -5,7 +5,7 @@ const Header = () => {
       <div className='title'>
        <a className='start items-center justify-center '>Diego Amachi</a>
       </div>
-      <nav>
+      <nav className=" flex justify-around">
         <a className=" rounded ">Home</a>
         <a>About me</a>
         <a>Contact</a>
