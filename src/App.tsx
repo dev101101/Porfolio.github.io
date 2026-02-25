@@ -6,6 +6,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import Blog from './pages/Blog'
 import Proyects from './pages/Proyects'
 import Speaking from './pages/Speaking'
+import NotFound from './pages/NotFound'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/proyects' element={<Proyects/>}/>
         <Route path='/speaking' element={<Speaking/>}/>
         <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer/>
     </div>

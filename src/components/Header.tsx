@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 
 const Header = () => {
   const buttos = [
@@ -9,24 +9,32 @@ const Header = () => {
     
   ]
   const name = "Diego Amachi"
-  const Routernav = (arg:string)=>{
-    if (arg = "GitHub"){
-      return 
-    }
-  }
+  const location = useLocation();
+  const isHome = location.pathname === "/home" || location.pathname === "/";
   return (
-    <header className="relative  flex w-full h-screen items-center gap-2 justify-center ">
-      <div className='galaxy'>
-          <div className='stars1'></div>
-          <div className='stars2'></div>
-          <div className='stars3'></div>
+    <header className={`
+    relative flex w-full items-center gap-2 justify-center transition-all duration-500
+    ${isHome ? 'h-screen' : 'h-20'} 
+  `}>
+      <div className='galaxy h-full'>
+                <div className='stars1'></div>
+                <div className='stars2'></div>
+                <div className='stars3'></div>
       </div>
-      <div className='title w-full h-full flex titlecont'>
-        <h1 className=" text-9xl title text-white"> {name.toLocaleUpperCase()}</h1>
-        <div className=" text-6xl text-nowrap devstyle text-[#ffea00]">
-          Developer Engineer  
+      {
+isHome && (
+        <div className="w-full h-full flex justify-center items-center transition-opacity duration-2000">
+            
+            <div className='title w-full h-full flex titlecont'>
+              <h1 className=" text-9xl title text-white"> {name.toLocaleUpperCase()}</h1>
+              <div className=" text-6xl text-nowrap devstyle text-[#ffea00]">
+                Developer Engineer  
+              </div>
+            </div>
         </div>
-      </div>
+      )
+    
+       }
       <div className="absolute bottom-0 w-full">
         <nav className=" fontstart gap-5 flex justify-around content-center  w-full top-0 z-10 p-4   px-3 py-2">
           <ul className=" bg-black p-1 box-border flex gap-1 justify-start">

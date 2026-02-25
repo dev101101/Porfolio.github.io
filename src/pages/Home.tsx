@@ -11,8 +11,8 @@ const Home = () => {
             
             <div className="flex flex-col gap-6 w-full mt-4 font-mono text-lg border-t-4 border-dashed border-white pt-6">
               <picture className=" m-auto">
-              <img className=" max-w-96 pixel-corners--wrapper" src="Daigo.png" alt="diego" />
-            </picture>
+                <img className=" max-w-96 pixel-corners--wrapper" src="Daigo.png" alt="diego" />
+              </picture>
                 <p>
                     I am a <span className="text-blue-400">Backend-focused Software Engineer</span> with a solid track record of building scalable and efficient applications since 2022. My core ecosystem is built on **Node.js and Express**, where I architect robust server-side logic and manage relational databases such as **MySQL and SQLite**. On the client side, I have extensive experience using **React** to develop dynamic and interactive user interfaces.
                 </p>
