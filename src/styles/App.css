@@ -62,7 +62,7 @@ body {
   left: 0;
   width: 100%;            /* Ocupa todo el ancho */
   height: 8px;           /* El alto que pediste */
-  background-color: #dd0000; /* Color de la línea */
+  background-color: #ffea00; /* Color de la línea */
 }
 
 .fontstart{
@@ -648,4 +648,136 @@ body {
     height: 100vh;
     position: absolute;
     overflow: hidden;
+}
+
+
+
+.pixel-corners,
+.pixel-corners--wrapper {
+  clip-path: polygon(0px calc(100% - 24px),
+    6px calc(100% - 24px),
+    6px calc(100% - 12px),
+    12px calc(100% - 12px),
+    12px calc(100% - 6px),
+    24px calc(100% - 6px),
+    24px 100%,
+    calc(100% - 24px) 100%,
+    calc(100% - 24px) calc(100% - 6px),
+    calc(100% - 12px) calc(100% - 6px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 6px) calc(100% - 12px),
+    calc(100% - 6px) calc(100% - 24px),
+    100% calc(100% - 24px),
+    100% 24px,
+    calc(100% - 6px) 24px,
+    calc(100% - 6px) 12px,
+    calc(100% - 12px) 12px,
+    calc(100% - 12px) 6px,
+    calc(100% - 24px) 6px,
+    calc(100% - 24px) 0px,
+    24px 0px,
+    24px 6px,
+    12px 6px,
+    12px 12px,
+    6px 12px,
+    6px 24px,
+    0px 24px);
+  position: relative;
+}
+.pixel-corners {
+  border: 6px solid transparent;
+}
+.pixel-corners--wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.pixel-corners--wrapper .pixel-corners {
+  display: block;
+  clip-path: polygon(6px 24px,
+    12px 24px,
+    12px 12px,
+    24px 12px,
+    24px 6px,
+    calc(100% - 24px) 6px,
+    calc(100% - 24px) 12px,
+    calc(100% - 12px) 12px,
+    calc(100% - 12px) 24px,
+    calc(100% - 6px) 24px,
+    calc(100% - 6px) calc(100% - 24px),
+    calc(100% - 12px) calc(100% - 24px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 24px) calc(100% - 12px),
+    calc(100% - 24px) calc(100% - 6px),
+    24px calc(100% - 6px),
+    24px calc(100% - 12px),
+    12px calc(100% - 12px),
+    12px calc(100% - 24px),
+    6px calc(100% - 24px));
+}
+.pixel-corners::after,
+.pixel-corners--wrapper::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0px calc(100% - 24px),
+    6px calc(100% - 24px),
+    6px calc(100% - 12px),
+    12px calc(100% - 12px),
+    12px calc(100% - 6px),
+    24px calc(100% - 6px),
+    24px 100%,
+    calc(100% - 24px) 100%,
+    calc(100% - 24px) calc(100% - 6px),
+    calc(100% - 12px) calc(100% - 6px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 6px) calc(100% - 12px),
+    calc(100% - 6px) calc(100% - 24px),
+    100% calc(100% - 24px),
+    100% 24px,
+    calc(100% - 6px) 24px,
+    calc(100% - 6px) 12px,
+    calc(100% - 12px) 12px,
+    calc(100% - 12px) 6px,
+    calc(100% - 24px) 6px,
+    calc(100% - 24px) 0px,
+    24px 0px,
+    24px 6px,
+    12px 6px,
+    12px 12px,
+    6px 12px,
+    6px 24px,
+    0px 24px,
+    0px 50%,
+    6px 50%,
+    6px 24px,
+    12px 24px,
+    12px 12px,
+    24px 12px,
+    24px 6px,
+    calc(100% - 24px) 6px,
+    calc(100% - 24px) 12px,
+    calc(100% - 12px) 12px,
+    calc(100% - 12px) 24px,
+    calc(100% - 6px) 24px,
+    calc(100% - 6px) calc(100% - 24px),
+    calc(100% - 12px) calc(100% - 24px),
+    calc(100% - 12px) calc(100% - 12px),
+    calc(100% - 24px) calc(100% - 12px),
+    calc(100% - 24px) calc(100% - 6px),
+    24px calc(100% - 6px),
+    24px calc(100% - 12px),
+    12px calc(100% - 12px),
+    12px calc(100% - 24px),
+    6px calc(100% - 24px),
+    6px 50%,
+    0px 50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0099ff;
+  display: block;
+  pointer-events: none;
+}
+.pixel-corners::after {
+  margin: -6px;
 }
